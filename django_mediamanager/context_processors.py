@@ -1,14 +1,14 @@
 from django.utils.safestring import mark_safe
 
-import media_manager
+import django_mediamanager
 
 
 def render_scripts():
-    return mark_safe("\n".join(media_manager.site.render_js()))
+    return mark_safe("\n".join(django_mediamanager.site.render_js()))
 
 
 def render_styles():
-    return mark_safe("\n".join(media_manager.site.render_css()))
+    return mark_safe("\n".join(django_mediamanager.site.render_css()))
 
 
 def media_manager_processors(req):

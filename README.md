@@ -19,14 +19,14 @@ Add the content processor
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 
 TEMPLATE_CONTEXT_PROCESSORS += (
-    'media_manager.context_processors.media_manager_processors',
+    'django_mediamanager.context_processors.media_manager_processors',
 )
 ```
 
 Autodiscover any media within your applications.  Add this to your main urls.py
 ```python
-import media_manager
-media_manager.autodiscover()
+import django_mediamanager
+django_mediamanager.autodiscover()
 ```
 
 ## Adding media
@@ -34,14 +34,14 @@ Your Django applications can provide a media.py file that registers all their me
 
 Example media.py
 ```python
-import media_manager
+import django_mediamanager
 
-media_manager.site.add_js((
+django_mediamanager.site.add_js((
     "js/bootstrap.min.js",
     "js/mycooljavascript.js",
 ))
 
-media_manager.site.add_css({
+django_mediamanager.site.add_css({
     "all": (
         "css/bootstrap.css",
         "css/prettystyles.css",
