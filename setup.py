@@ -9,12 +9,12 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-mediamanager',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     include_package_data=True,
     description='A central repository for Django apps to register any static media that needs to be included.',
     long_description=README,
     author='Jason Beverage',
     url="https://github.com/jasonbeverage/django-mediamanager",
-    install_requires=["Django>=1.5"]
+    install_requires=["Django>=1.9"]
 )
